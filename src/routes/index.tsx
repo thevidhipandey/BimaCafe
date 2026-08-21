@@ -426,7 +426,33 @@ function Index() {
               Get a quote <ArrowUpRight className="size-4" />
             </a>
           </div>
-          <div className="mt-10 flex flex-col gap-4 text-xs text-ink-foreground/55 sm:flex-row sm:justify-between">
+          <div className="mt-12 flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p className="wordmark text-3xl text-ink-foreground">
+                BIMA<span className="text-gold-gradient">CAFE</span>
+              </p>
+              <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.34em] text-ink-foreground/55">
+                Sampoorna Suraksha
+              </p>
+            </div>
+            <div className="flex items-center gap-4">
+              <img
+                src={paLogo}
+                alt="P&A Insurance Brokers logo"
+                width={816}
+                height={816}
+                loading="lazy"
+                className="size-12 shrink-0"
+              />
+              <p className="text-xs leading-relaxed text-ink-foreground/65">
+                A brand of <span className="font-semibold text-ink-foreground">P&amp;A Insurance
+                Brokers Pvt. Ltd.</span>
+                <br />
+                IRDAI licensed direct broker
+              </p>
+            </div>
+          </div>
+          <div className="mt-10 flex flex-col gap-4 hairline pt-8 text-xs text-ink-foreground/55 sm:flex-row sm:justify-between">
             <p>© {new Date().getFullYear()} Bima Cafe · P&amp;A Insurance Brokers Pvt. Ltd.</p>
             <p>Insurance is the subject matter of solicitation. IRDAI licensed broker.</p>
           </div>
