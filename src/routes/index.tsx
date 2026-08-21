@@ -20,6 +20,7 @@ import heroFamily from "@/assets/hero-family.jpg";
 import businessTower from "@/assets/business-tower.jpg";
 import advisor from "@/assets/advisor.jpg";
 import paLogo from "@/assets/pa-logo.png.asset.json";
+import bimacafeLogo from "@/assets/bimacafe-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -127,18 +128,16 @@ function Index() {
       <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-6 md:px-10">
           <div className="flex items-center gap-5">
-            <a href="/" className="flex flex-col leading-none">
-              <span className="wordmark text-[1.65rem] sm:text-[2rem]">
-                <span className="text-brand-deep">BIMA</span>
-                <span className="text-brand">CAFE</span>
-              </span>
-              <span className="mt-2 flex items-center gap-3">
-                <span className="gold-rule w-8 shrink-0" />
-                <span className="text-[9px] font-semibold uppercase tracking-[0.4em] text-muted-foreground">
-                  Sampoorna Suraksha
-                </span>
-              </span>
+            <a href="/" className="flex items-center gap-4">
+              <img
+                src={bimacafeLogo.url}
+                alt="Bima Cafe — Sampoorna Suraksha"
+                width={512}
+                height={205}
+                className="h-10 w-auto sm:h-12"
+              />
             </a>
+
             <span className="hidden h-10 w-px bg-border sm:block" />
             <a
               href="#quote"
@@ -190,7 +189,7 @@ function Index() {
               <span className="eyebrow text-gold-gradient">Since 2009 · 35 insurer partners</span>
             </div>
             <p className="wordmark mt-9 text-[clamp(2.75rem,7.2vw,5.5rem)] text-ink-foreground">
-              BIMA<span className="text-gold-gradient">CAFE</span>
+              BIMA<span className="text-gold">CAFE</span>
             </p>
             <h1 className="display-xl mt-6 text-[clamp(2rem,4vw,3.4rem)] font-normal italic text-ink-foreground/90">
               Protection worthy of a lifetime&apos;s work.
@@ -284,6 +283,9 @@ function Index() {
               </div>
             </a>
           ))}
+          <div aria-hidden className="hidden bg-card lg:block" />
+          <div aria-hidden className="hidden bg-card lg:block" />
+
         </div>
       </section>
 
@@ -429,21 +431,24 @@ function Index() {
           <div className="mt-12 flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="wordmark text-3xl text-ink-foreground">
-                BIMA<span className="text-gold-gradient">CAFE</span>
+                BIMA<span className="text-gold">CAFE</span>
               </p>
               <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.34em] text-ink-foreground/55">
                 Sampoorna Suraksha
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <img
-                src={paLogo.url}
-                alt="P&A Insurance Brokers logo"
-                width={258}
-                height={102}
-                loading="lazy"
-                className="h-11 w-auto shrink-0"
-              />
+              <span className="rounded-sm bg-cream px-3 py-2">
+                <img
+                  src={paLogo.url}
+                  alt="P&A Insurance Brokers logo"
+                  width={258}
+                  height={102}
+                  loading="lazy"
+                  className="h-11 w-auto shrink-0"
+                />
+              </span>
+
               <p className="text-xs leading-relaxed text-ink-foreground/90">
                 A brand of <span className="font-semibold text-ink-foreground">P&amp;A Insurance
                 Brokers Pvt. Ltd.</span>
