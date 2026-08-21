@@ -51,7 +51,11 @@
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
   --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
   --color-brand-foreground: var(--brand-foreground);
+  --color-rose: var(--rose);
+  --color-beige: var(--beige);
+  --color-cream: var(--cream);
 
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
