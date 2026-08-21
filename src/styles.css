@@ -109,7 +109,7 @@
   --input: #ddcbb0;
   --ring: #c9a66b;
 
-  --gradient-ink: linear-gradient(68deg, rgba(63, 11, 24, 1) 20%, rgba(111, 18, 40, 1) 40%, rgba(148, 29, 58, 1) 67%);
+  --gradient-ink: linear-gradient(155deg, #0f0508 0%, #3f0b18 28%, #6f1228 55%, #941d3a 100%);
   --gradient-cherry: linear-gradient(150deg, #a9253f 0%, #7a1830 100%);
   --gradient-gold: linear-gradient(100deg, #b18b4f 0%, #eddcb4 44%, #c9a66b 100%);
   --gradient-pearl: linear-gradient(180deg, #faf7f0 0%, #f3e8d3 100%);
