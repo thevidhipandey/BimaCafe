@@ -19,7 +19,7 @@ import {
 import heroFamily from "@/assets/hero-family.jpg";
 import businessTower from "@/assets/business-tower.jpg";
 import advisor from "@/assets/advisor.jpg";
-import paLogo from "@/assets/pa-logo.png";
+import paLogo from "@/assets/pa-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -146,7 +146,7 @@ function Index() {
               aria-label="P&A Insurance Brokers"
             >
               <img
-                src={paLogo}
+                src={paLogo.url}
                 alt="P&A Insurance Brokers logo"
                 width={816}
                 height={816}
@@ -437,7 +437,7 @@ function Index() {
             </div>
             <div className="flex items-center gap-4">
               <img
-                src={paLogo}
+                src={paLogo.url}
                 alt="P&A Insurance Brokers logo"
                 width={816}
                 height={816}
