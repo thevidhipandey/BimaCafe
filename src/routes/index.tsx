@@ -438,14 +438,17 @@ function Index() {
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <img
-                src={paLogo.url}
-                alt="P&A Insurance Brokers logo"
-                width={258}
-                height={102}
-                loading="lazy"
-                className="h-11 w-auto shrink-0"
-              />
+              <span className="rounded-sm bg-cream px-3 py-2">
+                <img
+                  src={paLogo.url}
+                  alt="P&A Insurance Brokers logo"
+                  width={258}
+                  height={102}
+                  loading="lazy"
+                  className="h-11 w-auto shrink-0"
+                />
+              </span>
+
               <p className="text-xs leading-relaxed text-ink-foreground/90">
                 A brand of <span className="font-semibold text-ink-foreground">P&amp;A Insurance
                 Brokers Pvt. Ltd.</span>
