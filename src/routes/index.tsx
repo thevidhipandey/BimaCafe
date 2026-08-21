@@ -127,18 +127,16 @@ function Index() {
       <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-6 md:px-10">
           <div className="flex items-center gap-5">
-            <a href="/" className="flex flex-col leading-none">
-              <span className="wordmark text-[1.65rem] sm:text-[2rem]">
-                <span className="text-brand-deep">BIMA</span>
-                <span className="text-brand">CAFE</span>
-              </span>
-              <span className="mt-2 flex items-center gap-3">
-                <span className="gold-rule w-8 shrink-0" />
-                <span className="text-[9px] font-semibold uppercase tracking-[0.4em] text-muted-foreground">
-                  Sampoorna Suraksha
-                </span>
-              </span>
+            <a href="/" className="flex items-center gap-4">
+              <img
+                src={bimacafeLogo.url}
+                alt="Bima Cafe — Sampoorna Suraksha"
+                width={512}
+                height={205}
+                className="h-10 w-auto sm:h-12"
+              />
             </a>
+
             <span className="hidden h-10 w-px bg-border sm:block" />
             <a
               href="#quote"
