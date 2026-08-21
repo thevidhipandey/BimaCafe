@@ -243,3 +243,21 @@
 @utility animate-rise {
   animation: rise 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
+
+@utility cherry-panel {
+  background-image: var(--gradient-cherry);
+  color: var(--color-brand-foreground);
+}
+
+@utility beige-panel {
+  background-color: var(--color-beige);
+}
+
+@utility wordmark {
+  font-family: var(--font-wordmark);
+  font-weight: 700;
+  font-optical-sizing: auto;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1;
+}
