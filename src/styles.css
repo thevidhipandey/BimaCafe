@@ -176,7 +176,7 @@
 
 @utility ink-panel {
   background-image: var(--gradient-ink);
-  background-color: var(--color-ink);
+  background-color: #3f0b18;
   color: var(--color-ink-foreground);
 }
 
