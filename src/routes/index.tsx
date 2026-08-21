@@ -189,12 +189,11 @@ function Index() {
               <span className="gold-rule w-16 shrink-0" />
               <span className="eyebrow text-gold-gradient">Since 2009 · 35 insurer partners</span>
             </div>
-            <h1 className="display-xl mt-8 text-[clamp(3rem,7.4vw,6.5rem)] text-ink-foreground">
-              Protection worthy
-              <br />
-              of a lifetime&apos;s
-              <br />
-              <span className="text-gold-gradient">work.</span>
+            <p className="wordmark mt-9 text-[clamp(2.75rem,7.2vw,5.5rem)] text-ink-foreground">
+              BIMA<span className="text-gold-gradient">CAFE</span>
+            </p>
+            <h1 className="display-xl mt-6 text-[clamp(2rem,4vw,3.4rem)] font-normal italic text-ink-foreground/90">
+              Protection worthy of a lifetime&apos;s work.
             </h1>
             <p className="mt-10 max-w-xl text-lg leading-relaxed text-ink-foreground/70">
               Bima Cafe is an advisory-first insurance broker. Eleven lines of cover, thirty-five
