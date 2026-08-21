@@ -158,7 +158,10 @@ function Index() {
       <section className="ink-panel relative overflow-hidden">
         <div className="mx-auto grid max-w-[1400px] items-center gap-16 px-6 py-24 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:py-36">
           <div className="animate-rise">
-            <span className="eyebrow text-gold-gradient">Since 2009 · 35 insurer partners</span>
+            <div className="flex items-center gap-4">
+              <span className="gold-rule w-16 shrink-0" />
+              <span className="eyebrow text-gold-gradient">Since 2009 · 35 insurer partners</span>
+            </div>
             <h1 className="display-xl mt-8 text-[clamp(3rem,7.4vw,6.5rem)] text-ink-foreground">
               Protection worthy
               <br />
@@ -197,7 +200,7 @@ function Index() {
                 className="h-[34rem] w-full object-cover lg:h-[42rem]"
               />
             </div>
-            <div className="absolute -bottom-10 -left-6 hidden w-72 bg-card p-8 text-card-foreground shadow-card sm:block">
+            <div className="absolute -bottom-10 -left-6 hidden w-72 border-t-2 border-gold bg-card p-8 text-card-foreground shadow-card sm:block">
               <p className="eyebrow text-brand">Claim promise</p>
               <p className="mt-4 font-[family-name:var(--font-display)] text-4xl font-bold">
                 98.2%
@@ -211,7 +214,7 @@ function Index() {
       </section>
 
       {/* Stats */}
-      <section className="border-b border-border bg-secondary/60">
+      <section className="pearl-panel gold-top border-b border-border">
         <div className="mx-auto grid max-w-[1400px] gap-y-12 px-6 py-20 md:px-10 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s) => (
             <div key={s.label} className="lg:border-l lg:border-border lg:pl-10 lg:first:border-l-0 lg:first:pl-0">
@@ -259,7 +262,7 @@ function Index() {
       </section>
 
       {/* Advisory band */}
-      <section className="ink-panel">
+      <section className="ink-panel gold-top">
         <div className="mx-auto grid max-w-[1400px] items-center gap-20 px-6 py-28 md:px-10 lg:grid-cols-2 lg:py-40">
           <div className="grid gap-6">
             <img
@@ -322,7 +325,7 @@ function Index() {
       </section>
 
       {/* Quote CTA */}
-      <section id="quote" className="border-t border-border bg-secondary/60">
+      <section id="quote" className="pearl-panel gold-top border-t border-border">
         <div className="mx-auto grid max-w-[1400px] gap-20 px-6 py-28 md:px-10 lg:grid-cols-[1fr_0.9fr] lg:py-36">
           <div>
             <span className="eyebrow text-brand">Let us help you</span>
@@ -384,7 +387,7 @@ function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="ink-panel">
+      <footer className="ink-panel gold-top">
         <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-10">
           <div className="flex flex-col gap-10 border-b border-ink-foreground/15 pb-12 lg:flex-row lg:items-end lg:justify-between">
             <p className="display-xl max-w-2xl text-[clamp(2rem,3.4vw,3rem)] text-ink-foreground">
