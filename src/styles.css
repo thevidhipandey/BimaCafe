@@ -177,7 +177,22 @@
 
 @utility ink-panel {
   background-image: var(--gradient-ink);
+  background-color: var(--color-ink);
   color: var(--color-ink-foreground);
+}
+
+@utility pearl-panel {
+  background-image: var(--gradient-pearl);
+}
+
+@utility gold-rule {
+  height: 1px;
+  background-image: var(--gradient-gold);
+  opacity: 0.55;
+}
+
+@utility gold-top {
+  border-top: 1px solid color-mix(in oklab, var(--color-gold) 45%, transparent);
 }
 
 @utility text-gold-gradient {
@@ -187,8 +202,9 @@
 }
 
 @utility hairline {
-  border-top: 1px solid color-mix(in oklab, var(--color-ink) 12%, transparent);
+  border-top: 1px solid color-mix(in oklab, var(--color-gold) 32%, transparent);
 }
+
 
 @utility eyebrow {
   font-family: var(--font-sans);
