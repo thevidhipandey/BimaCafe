@@ -125,14 +125,40 @@ function Index() {
       {/* Nav */}
       <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-6 md:px-10">
-          <a href="/" className="flex flex-col leading-none">
-            <span className="font-[family-name:var(--font-display)] text-2xl font-extrabold tracking-[-0.05em]">
-              bima<span className="text-brand">cafe</span>
-            </span>
-            <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.32em] text-muted-foreground">
-              Sampoorna Suraksha
-            </span>
-          </a>
+          <div className="flex items-center gap-5">
+            <a href="/" className="flex flex-col leading-none">
+              <span className="wordmark text-[1.65rem] sm:text-[2rem]">
+                <span className="text-brand-deep">BIMA</span>
+                <span className="text-brand">CAFE</span>
+              </span>
+              <span className="mt-2 flex items-center gap-3">
+                <span className="gold-rule w-8 shrink-0" />
+                <span className="text-[9px] font-semibold uppercase tracking-[0.4em] text-muted-foreground">
+                  Sampoorna Suraksha
+                </span>
+              </span>
+            </a>
+            <span className="hidden h-10 w-px bg-border sm:block" />
+            <a
+              href="#quote"
+              className="hidden items-center gap-2.5 sm:flex"
+              aria-label="P&A Insurance Brokers"
+            >
+              <img
+                src={paLogo}
+                alt="P&A Insurance Brokers logo"
+                width={816}
+                height={816}
+                loading="lazy"
+                className="size-9"
+              />
+              <span className="text-[9px] font-semibold uppercase leading-tight tracking-[0.18em] text-muted-foreground">
+                A unit of
+                <br />
+                P&amp;A Insurance Brokers
+              </span>
+            </a>
+          </div>
           <nav className="hidden items-center gap-10 text-sm font-medium lg:flex">
             {["Insurance", "For Business", "Claims", "About", "POSP"].map((item) => (
               <a
