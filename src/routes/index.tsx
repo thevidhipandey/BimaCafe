@@ -189,7 +189,7 @@ function Index() {
               <span className="eyebrow text-gold-gradient">Since 2009 · 35 insurer partners</span>
             </div>
             <p className="wordmark mt-9 text-[clamp(2.75rem,7.2vw,5.5rem)] text-ink-foreground">
-              BIMA<span className="text-gold-gradient">CAFE</span>
+              BIMA<span className="text-gold">CAFE</span>
             </p>
             <h1 className="display-xl mt-6 text-[clamp(2rem,4vw,3.4rem)] font-normal italic text-ink-foreground/90">
               Protection worthy of a lifetime&apos;s work.
@@ -431,7 +431,7 @@ function Index() {
           <div className="mt-12 flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="wordmark text-3xl text-ink-foreground">
-                BIMA<span className="text-gold-gradient">CAFE</span>
+                BIMA<span className="text-gold">CAFE</span>
               </p>
               <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.34em] text-ink-foreground/55">
                 Sampoorna Suraksha
