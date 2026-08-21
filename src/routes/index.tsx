@@ -20,6 +20,7 @@ import heroFamily from "@/assets/hero-family.jpg";
 import businessTower from "@/assets/business-tower.jpg";
 import advisor from "@/assets/advisor.jpg";
 import paLogo from "@/assets/pa-logo.png.asset.json";
+import bimacafeLogo from "@/assets/bimacafe-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
