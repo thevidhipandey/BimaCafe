@@ -444,7 +444,7 @@ function Index() {
                 loading="lazy"
                 className="h-11 w-auto shrink-0"
               />
-              <p className="text-xs leading-relaxed text-ink-foreground/65">
+              <p className="text-xs leading-relaxed text-ink-foreground/90">
                 A brand of <span className="font-semibold text-ink-foreground">P&amp;A Insurance
                 Brokers Pvt. Ltd.</span>
                 <br />
