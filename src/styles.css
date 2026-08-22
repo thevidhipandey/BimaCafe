@@ -11,8 +11,8 @@
  */
 
 @theme inline {
-  --font-display: "Bodoni Moda", "Cormorant Garamond", ui-serif, Georgia, serif;
-  --font-wordmark: "Bodoni Moda", ui-serif, Georgia, serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-wordmark: "Fraunces", ui-serif, Georgia, serif;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -223,9 +223,10 @@
 
 @utility display-xl {
   font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 0.94;
+  font-weight: 600;
+  font-optical-sizing: auto;
+  letter-spacing: -0.015em;
+  line-height: 1.02;
 }
 
 @keyframes rise {
@@ -254,9 +255,9 @@
 
 @utility wordmark {
   font-family: var(--font-wordmark);
-  font-weight: 700;
+  font-weight: 900;
   font-optical-sizing: auto;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   line-height: 1;
 }
