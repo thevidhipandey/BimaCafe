@@ -11,8 +11,8 @@
  */
 
 @theme inline {
-  --font-display: "Bodoni Moda", "Cormorant Garamond", ui-serif, Georgia, serif;
-  --font-wordmark: "Bodoni Moda", ui-serif, Georgia, serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-wordmark: "Fraunces", ui-serif, Georgia, serif;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
 
   --radius-sm: calc(var(--radius) - 4px);
