@@ -223,9 +223,10 @@
 
 @utility display-xl {
   font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 0.94;
+  font-weight: 600;
+  font-optical-sizing: auto;
+  letter-spacing: -0.015em;
+  line-height: 1.02;
 }
 
 @keyframes rise {
