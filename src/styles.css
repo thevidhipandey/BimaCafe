@@ -255,9 +255,9 @@
 
 @utility wordmark {
   font-family: var(--font-wordmark);
-  font-weight: 700;
+  font-weight: 900;
   font-optical-sizing: auto;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   line-height: 1;
 }
