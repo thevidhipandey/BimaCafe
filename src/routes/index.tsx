@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowUpRight,
   HeartPulse,
@@ -16,11 +16,12 @@ import {
   Quote,
 } from "lucide-react";
 
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 import heroFamily from "@/assets/hero-family.jpg";
 import businessTower from "@/assets/business-tower.jpg";
 import advisor from "@/assets/advisor.jpg";
-import paLogo from "@/assets/pa-logo.png.asset.json";
-import bimacafeLogo from "@/assets/bimacafe-logo.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -109,76 +110,8 @@ const testimonials = [
 function Index() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Utility bar */}
-      <div className="ink-panel hidden md:block">
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between px-10 py-3 text-xs tracking-wide">
-          <div className="flex items-center gap-8 opacity-80">
-            <span className="inline-flex items-center gap-2">
-              <Phone className="size-3.5" /> +91 85868 79869
-            </span>
-            <span className="inline-flex items-center gap-2">
-              <Mail className="size-3.5" /> support@painsurancebrokers.in
-            </span>
-          </div>
-          <span className="eyebrow text-gold-gradient">IRDAI licensed broker · P&amp;A Insurance Brokers</span>
-        </div>
-      </div>
+      <SiteHeader />
 
-      {/* Nav */}
-      <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-6 md:px-10">
-          <div className="flex items-center gap-5">
-            <a href="/" className="flex items-center gap-4">
-              <img
-                src={bimacafeLogo.url}
-                alt="Bima Cafe — Sampoorna Suraksha"
-                width={512}
-                height={205}
-                className="h-10 w-auto sm:h-12"
-              />
-            </a>
-
-            <span className="hidden h-10 w-px bg-border sm:block" />
-            <a
-              href="#quote"
-              className="hidden items-center gap-2.5 sm:flex"
-              aria-label="P&A Insurance Brokers"
-            >
-              <img
-                src={paLogo.url}
-                alt="P&A Insurance Brokers logo"
-                width={258}
-                height={102}
-                loading="lazy"
-                className="h-9 w-auto"
-              />
-              <span className="text-[9px] font-semibold uppercase leading-tight tracking-[0.18em] text-muted-foreground">
-                A unit of
-                <br />
-                P&amp;A Insurance Brokers
-              </span>
-            </a>
-          </div>
-          <nav className="hidden items-center gap-10 text-sm font-medium lg:flex">
-            {["Insurance", "For Business", "Claims", "About", "POSP"].map((item) => (
-              <a
-                key={item}
-                href="#cover"
-                className="text-foreground/70 transition-colors hover:text-foreground"
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
-          <a
-            href="#quote"
-            className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:shadow-luxe"
-          >
-            Talk to an advisor
-            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-        </div>
-      </header>
 
       {/* Hero */}
       <section className="ink-panel relative overflow-hidden">
@@ -332,8 +265,54 @@ function Index() {
         </div>
       </section>
 
+      {/* Our story → About */}
+      <section className="pearl-panel gold-top border-y border-border">
+        <div className="mx-auto grid max-w-[1400px] items-center gap-16 px-6 py-24 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:py-32">
+          <div>
+            <span className="eyebrow text-brand">Behind the brand</span>
+            <h2 className="display-xl mt-7 text-[clamp(2.2rem,4.2vw,3.6rem)]">
+              Seventeen years of advice, not sales pitches
+            </h2>
+            <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              Bima Cafe is the advisory brand of P&amp;A Insurance Brokers. Meet the people, the
+              values and the claim promise that sit behind every policy we place.
+            </p>
+            <div className="mt-12 flex flex-wrap gap-4">
+              <Link
+                to="/about"
+                className="group inline-flex items-center gap-2 rounded-full bg-primary px-9 py-4 text-sm font-semibold text-primary-foreground transition-all hover:shadow-luxe"
+              >
+                About Bima Cafe
+                <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
+              <Link
+                to="/about"
+                hash="join"
+                className="inline-flex items-center gap-2 rounded-full border border-input px-9 py-4 text-sm font-semibold text-foreground transition-colors hover:border-brand hover:text-brand"
+              >
+                Become a POSP partner
+              </Link>
+            </div>
+          </div>
+          <div className="grid gap-px border border-border bg-border sm:grid-cols-2">
+            {[
+              { v: "2009", l: "Brokerage founded" },
+              { v: "35+", l: "Insurer partnerships" },
+              { v: "11", l: "Lines of cover" },
+              { v: "98.2%", l: "Assisted claim success" },
+            ].map((s) => (
+              <div key={s.l} className="bg-card p-10">
+                <p className="font-[family-name:var(--font-display)] text-4xl font-bold">{s.v}</p>
+                <p className="mt-3 text-sm text-muted-foreground">{s.l}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="mx-auto max-w-[1400px] px-6 py-28 md:px-10 lg:py-40">
+
         <span className="eyebrow text-brand">Client voices</span>
         <h2 className="display-xl mt-7 max-w-2xl text-[clamp(2.4rem,4.4vw,4rem)]">
           Trusted at the moment it matters most
@@ -414,55 +393,8 @@ function Index() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="ink-panel gold-top">
-        <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-10">
-          <div className="flex flex-col gap-10 border-b border-ink-foreground/15 pb-12 lg:flex-row lg:items-end lg:justify-between">
-            <p className="display-xl max-w-2xl text-[clamp(2rem,3.4vw,3rem)] text-ink-foreground">
-              Sampoorna Suraksha — complete protection, honestly advised.
-            </p>
-            <a
-              href="#quote"
-              className="inline-flex items-center gap-2 self-start rounded-full bg-brand px-8 py-4 text-sm font-semibold text-brand-foreground lg:self-auto"
-            >
-              Get a quote <ArrowUpRight className="size-4" />
-            </a>
-          </div>
-          <div className="mt-12 flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
-            <div>
-              <p className="wordmark text-3xl text-ink-foreground">
-                BIMA<span className="text-gold">CAFE</span>
-              </p>
-              <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.34em] text-ink-foreground/55">
-                Sampoorna Suraksha
-              </p>
-            </div>
-            <div className="flex items-center gap-4">
-              <span className="rounded-sm bg-cream px-3 py-2">
-                <img
-                  src={paLogo.url}
-                  alt="P&A Insurance Brokers logo"
-                  width={258}
-                  height={102}
-                  loading="lazy"
-                  className="h-11 w-auto shrink-0"
-                />
-              </span>
+      <SiteFooter />
 
-              <p className="text-xs leading-relaxed text-ink-foreground/90">
-                A brand of <span className="font-semibold text-ink-foreground">P&amp;A Insurance
-                Brokers Pvt. Ltd.</span>
-                <br />
-                IRDAI licensed direct broker
-              </p>
-            </div>
-          </div>
-          <div className="mt-10 flex flex-col gap-4 hairline pt-8 text-xs text-ink-foreground/55 sm:flex-row sm:justify-between">
-            <p>© {new Date().getFullYear()} Bima Cafe · P&amp;A Insurance Brokers Pvt. Ltd.</p>
-            <p>Insurance is the subject matter of solicitation. IRDAI licensed broker.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
