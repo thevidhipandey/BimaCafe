@@ -332,8 +332,54 @@ function Index() {
         </div>
       </section>
 
+      {/* Our story → About */}
+      <section className="pearl-panel gold-top border-y border-border">
+        <div className="mx-auto grid max-w-[1400px] items-center gap-16 px-6 py-24 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:py-32">
+          <div>
+            <span className="eyebrow text-brand">Behind the brand</span>
+            <h2 className="display-xl mt-7 text-[clamp(2.2rem,4.2vw,3.6rem)]">
+              Seventeen years of advice, not sales pitches
+            </h2>
+            <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              Bima Cafe is the advisory brand of P&amp;A Insurance Brokers. Meet the people, the
+              values and the claim promise that sit behind every policy we place.
+            </p>
+            <div className="mt-12 flex flex-wrap gap-4">
+              <Link
+                to="/about"
+                className="group inline-flex items-center gap-2 rounded-full bg-primary px-9 py-4 text-sm font-semibold text-primary-foreground transition-all hover:shadow-luxe"
+              >
+                About Bima Cafe
+                <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
+              <Link
+                to="/about"
+                hash="join"
+                className="inline-flex items-center gap-2 rounded-full border border-input px-9 py-4 text-sm font-semibold text-foreground transition-colors hover:border-brand hover:text-brand"
+              >
+                Become a POSP partner
+              </Link>
+            </div>
+          </div>
+          <div className="grid gap-px border border-border bg-border sm:grid-cols-2">
+            {[
+              { v: "2009", l: "Brokerage founded" },
+              { v: "35+", l: "Insurer partnerships" },
+              { v: "11", l: "Lines of cover" },
+              { v: "98.2%", l: "Assisted claim success" },
+            ].map((s) => (
+              <div key={s.l} className="bg-card p-10">
+                <p className="font-[family-name:var(--font-display)] text-4xl font-bold">{s.v}</p>
+                <p className="mt-3 text-sm text-muted-foreground">{s.l}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="mx-auto max-w-[1400px] px-6 py-28 md:px-10 lg:py-40">
+
         <span className="eyebrow text-brand">Client voices</span>
         <h2 className="display-xl mt-7 max-w-2xl text-[clamp(2.4rem,4.4vw,4rem)]">
           Trusted at the moment it matters most
