@@ -148,160 +148,210 @@ function About() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
 
-      {/* Hero */}
+      {/* Hero — editorial split */}
       <section className="ink-panel relative overflow-hidden">
-        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 lg:py-36">
-          <div className="flex items-center gap-4">
-            <span className="gold-rule w-16 shrink-0" />
-            <span className="eyebrow text-gold">About us</span>
-          </div>
-          <h1 className="display-xl mt-9 max-w-4xl text-[clamp(2.5rem,6vw,5rem)] text-ink-foreground">
-            You can depend on us for advice, not a sales pitch.
-          </h1>
-          <p className="mt-10 max-w-2xl text-lg leading-relaxed text-ink-foreground/70">
-            Bima Cafe is the advisory brand of P&amp;A Insurance Brokers. We simplify insurance for
-            individuals and businesses with tailored cover, competitive pricing and support that
-            stays with you long after the policy is issued.
-          </p>
-          <div className="mt-14 grid gap-px border border-ink-foreground/15 bg-ink-foreground/15 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { v: "17 yrs", l: "Advising Indian families" },
-              { v: "35+", l: "Insurer partnerships" },
-              { v: "11", l: "Lines of cover" },
-              { v: "98.2%", l: "Assisted claim success" },
-            ].map((s) => (
-              <div key={s.l} className="ink-panel px-8 py-10">
-                <p className="font-[family-name:var(--font-display)] text-4xl font-bold text-ink-foreground">
-                  {s.v}
-                </p>
-                <p className="mt-3 text-sm text-ink-foreground/65">{s.l}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Story */}
-      <section className="pearl-panel gold-top border-b border-border">
-        <div className="mx-auto grid max-w-[1400px] items-center gap-20 px-6 py-24 md:px-10 lg:grid-cols-[0.95fr_1.05fr] lg:py-32">
-          <div className="relative">
-            <img
-              src={aboutOffice}
-              alt="A Bima Cafe advisor walking a client through policy documents"
-              width={1408}
-              height={1008}
-              loading="lazy"
-              className="h-[26rem] w-full rounded-sm object-cover shadow-luxe lg:h-[32rem]"
-            />
-            <div className="absolute -bottom-8 -right-4 hidden w-64 border-t-2 border-gold bg-card p-7 shadow-card sm:block">
-              <p className="eyebrow text-brand">Our promise</p>
-              <p className="mt-4 text-base leading-relaxed text-card-foreground">
-                We don&apos;t just offer insurance — we offer peace of mind.
-              </p>
+        <div className="mx-auto grid max-w-[1400px] items-center gap-16 px-6 py-24 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:py-32">
+          <div className="animate-rise">
+            <div className="flex items-center gap-4">
+              <span className="gold-rule w-16 shrink-0" />
+              <span className="eyebrow text-gold">About Bima Cafe</span>
             </div>
-          </div>
-          <div>
-            <span className="eyebrow text-brand">Who we are</span>
-            <h2 className="display-xl mt-7 text-[clamp(2.2rem,4.2vw,3.6rem)]">
-              Trusted brokers for the things you cannot afford to lose
-            </h2>
-            <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-              At Bima Cafe we are dedicated to simplifying insurance for individuals and businesses.
-              As licensed brokers, we offer tailored solutions across health, life, motor, marine,
-              property and liability — ensuring you receive the right coverage at competitive rates.
-            </p>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              With a team of experienced professionals, we prioritise understanding your requirements
-              before recommending anything. Our mission is to build lasting relationships by
-              providing reliable guidance at every step — from the first question to the final claim
-              settlement.
+            <h1 className="display-xl mt-9 max-w-2xl text-[clamp(2.4rem,5.4vw,4.6rem)] text-ink-foreground">
+              You can depend on us for advice, not a sales pitch.
+            </h1>
+            <p className="mt-10 max-w-xl text-lg leading-relaxed text-ink-foreground/70">
+              Bima Cafe is the advisory brand of P&amp;A Insurance Brokers. We simplify insurance for
+              families and businesses with tailored cover, competitive pricing and support that stays
+              with you long after the policy is issued.
             </p>
             <div className="mt-12 flex flex-wrap gap-4">
               <Link
                 to="/"
                 hash="quote"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-all hover:shadow-luxe"
+                className="group inline-flex items-center gap-2 rounded-full bg-brand px-9 py-4 text-sm font-semibold text-brand-foreground transition-all hover:shadow-luxe"
               >
-                Talk to an advisor <ArrowUpRight className="size-4" />
+                Talk to an advisor
+                <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
-              <a
-                href="#join"
-                className="inline-flex items-center gap-2 rounded-full border border-input px-8 py-4 text-sm font-semibold text-foreground transition-colors hover:border-brand hover:text-brand"
+              <Link
+                to="/"
+                hash="cover"
+                className="inline-flex items-center gap-2 rounded-full border border-ink-foreground/25 px-9 py-4 text-sm font-semibold text-ink-foreground/90 transition-colors hover:border-ink-foreground/60"
               >
-                Join the team
-              </a>
+                Explore our cover
+              </Link>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="overflow-hidden rounded-sm shadow-luxe">
+              <img
+                src={aboutTeam}
+                alt="The Bima Cafe advisory team at work"
+                width={1408}
+                height={1600}
+                className="h-[26rem] w-full object-cover lg:h-[34rem]"
+              />
+            </div>
+            <div className="absolute -bottom-10 -left-6 hidden w-72 border-t-2 border-gold bg-card p-8 text-card-foreground shadow-card sm:block">
+              <p className="eyebrow text-brand">Since 2009</p>
+              <p className="mt-4 font-[family-name:var(--font-display)] text-4xl font-bold">17 yrs</p>
+              <p className="mt-2 text-sm text-muted-foreground">
+                of advising Indian families, founders and enterprises across 11 lines of cover.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values / Mission / Goals */}
-      <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 lg:py-32">
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-2xl">
-            <span className="eyebrow text-brand">What guides us</span>
-            <h2 className="display-xl mt-7 text-[clamp(2.2rem,4.4vw,3.8rem)]">{pillar.heading}</h2>
-            <p className="mt-8 text-lg leading-relaxed text-muted-foreground">{pillar.body}</p>
-          </div>
-          <div className="flex flex-wrap gap-2 border border-border p-1.5">
-            {pillars.map((p) => (
-              <button
-                key={p.key}
-                type="button"
-                onClick={() => setActive(p.key)}
-                aria-pressed={active === p.key}
-                className={`px-6 py-3 text-sm font-semibold tracking-wide transition-colors ${
-                  active === p.key
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground/70 hover:bg-secondary"
-                }`}
-              >
-                {p.label}
-              </button>
+      {/* Stat band */}
+      <section className="pearl-panel gold-top border-b border-border">
+        <div className="mx-auto grid max-w-[1400px] gap-y-12 px-6 py-20 md:px-10 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { v: "18,400+", l: "Policies advised" },
+            { v: "35+", l: "Insurer partnerships" },
+            { v: "₹41 Cr", l: "Claims settled for clients" },
+            { v: "98.2%", l: "Assisted claim success" },
+          ].map((s) => (
+            <div
+              key={s.l}
+              className="lg:border-l lg:border-border lg:pl-10 lg:first:border-l-0 lg:first:pl-0"
+            >
+              <p className="font-[family-name:var(--font-display)] text-5xl font-bold tracking-[-0.04em]">
+                {s.v}
+              </p>
+              <p className="mt-3 text-sm text-muted-foreground">{s.l}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Story */}
+      <section className="mx-auto grid max-w-[1400px] items-center gap-20 px-6 py-24 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:py-32">
+        <div>
+          <span className="eyebrow text-brand">Who we are</span>
+          <h2 className="display-xl mt-7 text-[clamp(2.2rem,4.2vw,3.6rem)]">
+            Trusted brokers for the things you cannot afford to lose
+          </h2>
+          <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
+            As licensed brokers we offer tailored solutions across health, life, motor, marine,
+            property and liability — ensuring you receive the right coverage at competitive rates,
+            explained in language you can act on.
+          </p>
+          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+            Our mission is to build lasting relationships by providing reliable guidance at every
+            step — from the first question to the final claim settlement.
+          </p>
+          <div className="mt-12 grid gap-px border border-border bg-border sm:grid-cols-3">
+            {[
+              { v: "1 hr", l: "Advisor callback" },
+              { v: "11", l: "Lines of cover" },
+              { v: "0", l: "Exclusive insurer ties" },
+            ].map((s) => (
+              <div key={s.l} className="bg-card p-8">
+                <p className="font-[family-name:var(--font-display)] text-3xl font-bold text-brand">
+                  {s.v}
+                </p>
+                <p className="mt-2 text-sm text-muted-foreground">{s.l}</p>
+              </div>
             ))}
           </div>
         </div>
-
-        <div className="mt-16 grid gap-px border border-border bg-border lg:grid-cols-[0.8fr_1.2fr]">
+        <div className="relative">
           <img
-            key={pillar.image}
-            src={pillar.image}
-            alt={pillar.imageAlt}
-            width={1200}
-            height={1504}
+            src={aboutOffice}
+            alt="A Bima Cafe advisor walking a client through policy documents"
+            width={1408}
+            height={1008}
             loading="lazy"
-            className="animate-rise h-72 w-full bg-card object-cover lg:h-full"
+            className="h-[26rem] w-full rounded-sm object-cover shadow-luxe lg:h-[32rem]"
           />
-          <div className="grid gap-px bg-border sm:grid-cols-2">
-            {pillar.items.map(({ icon: Icon, title, note }) => (
-              <div key={title} className="bg-card p-9">
-                <Icon className="size-7 text-brand" strokeWidth={1.4} />
-                <h3 className="mt-8 text-lg font-semibold">{title}</h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{note}</p>
-              </div>
-            ))}
+          <div className="absolute -bottom-8 -right-4 hidden w-64 border-t-2 border-gold bg-card p-7 shadow-card sm:block">
+            <p className="eyebrow text-brand">Our promise</p>
+            <p className="mt-4 text-base leading-relaxed text-card-foreground">
+              We don&apos;t just offer insurance — we offer peace of mind.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Values / Mission / Goals */}
+      <section className="pearl-panel gold-top border-y border-border">
+        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 lg:py-32">
+          <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-2xl">
+              <span className="eyebrow text-brand">What guides us</span>
+              <h2 className="display-xl mt-7 text-[clamp(2.2rem,4.4vw,3.8rem)]">{pillar.heading}</h2>
+              <p className="mt-8 text-lg leading-relaxed text-muted-foreground">{pillar.body}</p>
+            </div>
+            <div className="flex flex-wrap gap-2 border border-border bg-card p-1.5">
+              {pillars.map((p) => (
+                <button
+                  key={p.key}
+                  type="button"
+                  onClick={() => setActive(p.key)}
+                  aria-pressed={active === p.key}
+                  className={`px-6 py-3 text-sm font-semibold tracking-wide transition-colors ${
+                    active === p.key
+                      ? "bg-primary text-primary-foreground"
+                      : "text-foreground/70 hover:bg-secondary"
+                  }`}
+                >
+                  {p.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-16 grid gap-px border border-border bg-border lg:grid-cols-[0.8fr_1.2fr]">
+            <img
+              key={pillar.image}
+              src={pillar.image}
+              alt={pillar.imageAlt}
+              width={1200}
+              height={1504}
+              loading="lazy"
+              className="animate-rise h-72 w-full bg-card object-cover lg:h-full"
+            />
+            <div className="grid gap-px bg-border sm:grid-cols-2">
+              {pillar.items.map(({ icon: Icon, title, note }) => (
+                <div key={title} className="bg-card p-9">
+                  <Icon className="size-7 text-brand" strokeWidth={1.4} />
+                  <h3 className="mt-8 text-lg font-semibold">{title}</h3>
+                  <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{note}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Milestones */}
       <section className="ink-panel gold-top">
-        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 lg:py-32">
-          <span className="eyebrow text-gold">Our journey</span>
-          <h2 className="display-xl mt-7 max-w-2xl text-[clamp(2.2rem,4.4vw,3.8rem)] text-ink-foreground">
-            Seventeen years of quiet, steady advice
-          </h2>
-          <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-            {milestones.map((m) => (
-              <div key={m.year} className="border-t border-ink-foreground/20 pt-8">
-                <p className="font-[family-name:var(--font-display)] text-3xl font-bold text-gold">
-                  {m.year}
-                </p>
-                <h3 className="mt-5 text-xl font-semibold text-ink-foreground">{m.title}</h3>
-                <p className="mt-3 leading-relaxed text-ink-foreground/65">{m.body}</p>
-              </div>
-            ))}
+        <div className="mx-auto grid max-w-[1400px] gap-16 px-6 py-24 md:px-10 lg:grid-cols-[0.85fr_1.15fr] lg:py-32">
+          <div>
+            <span className="eyebrow text-gold">Our journey</span>
+            <h2 className="display-xl mt-7 text-[clamp(2.2rem,4vw,3.4rem)] text-ink-foreground">
+              Seventeen years of quiet, steady advice
+            </h2>
+            <p className="mt-8 max-w-md leading-relaxed text-ink-foreground/70">
+              From a single-desk brokerage to a digital advisory brand — the same promise, at a
+              larger scale.
+            </p>
           </div>
+          <ol className="space-y-10">
+            {milestones.map((m) => (
+              <li key={m.year} className="grid grid-cols-[auto_1fr] gap-8">
+                <span className="font-[family-name:var(--font-display)] text-2xl font-bold text-gold">
+                  {m.year}
+                </span>
+                <div className="border-t border-ink-foreground/20 pt-2">
+                  <h3 className="text-xl font-semibold text-ink-foreground">{m.title}</h3>
+                  <p className="mt-3 leading-relaxed text-ink-foreground/65">{m.body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
@@ -386,6 +436,22 @@ function About() {
               Join the team <ArrowUpRight className="size-4" />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Back to cover */}
+      <section className="pearl-panel gold-top border-t border-border">
+        <div className="mx-auto flex max-w-[1400px] flex-col gap-8 px-6 py-16 md:flex-row md:items-center md:justify-between md:px-10">
+          <p className="display-xl max-w-2xl text-[clamp(1.7rem,3vw,2.6rem)]">
+            Ready to see the cover we place for families like yours?
+          </p>
+          <Link
+            to="/"
+            className="group inline-flex items-center gap-2 self-start rounded-full bg-primary px-9 py-4 text-sm font-semibold text-primary-foreground transition-all hover:shadow-luxe md:self-auto"
+          >
+            Back to home
+            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
         </div>
       </section>
 
