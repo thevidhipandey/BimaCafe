@@ -66,7 +66,7 @@ export function SiteHeader() {
               <Link
                 key={item.label}
                 to={item.to}
-                hash={item.hash}
+                {...(item.hash ? { hash: item.hash } : {})}
                 className="text-foreground/70 transition-colors hover:text-foreground"
                 activeOptions={{ exact: true }}
                 activeProps={{ className: "text-brand" }}
