@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowUpRight,
   HeartPulse,
@@ -16,11 +16,12 @@ import {
   Quote,
 } from "lucide-react";
 
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 import heroFamily from "@/assets/hero-family.jpg";
 import businessTower from "@/assets/business-tower.jpg";
 import advisor from "@/assets/advisor.jpg";
-import paLogo from "@/assets/pa-logo.png.asset.json";
-import bimacafeLogo from "@/assets/bimacafe-logo.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
