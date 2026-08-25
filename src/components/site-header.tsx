@@ -1,15 +1,16 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight, Mail, Phone } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Mail, Phone } from "lucide-react";
 
 import paLogo from "@/assets/pa-logo.png.asset.json";
 import bimacafeLogo from "@/assets/bimacafe-logo.png.asset.json";
+import { products } from "@/lib/products";
 
 const nav = [
-  { label: "Insurance", to: "/", hash: "cover" },
   { label: "For Business", to: "/", hash: "cover" },
-  { label: "Claims", to: "/", hash: "quote" },
+  { label: "Claims", to: "/contact", hash: "claims" },
   { label: "About", to: "/about", hash: undefined },
-  { label: "POSP", to: "/about", hash: "join" },
+  { label: "POSP", to: "/posp", hash: undefined },
+  { label: "Contact", to: "/contact", hash: undefined },
 ] as const;
 
 export function SiteHeader() {
@@ -62,6 +63,38 @@ export function SiteHeader() {
           </div>
 
           <nav className="hidden items-center gap-10 text-sm font-medium lg:flex">
+            {/* Insurance dropdown */}
+            <div className="group relative">
+              <Link
+                to="/"
+                hash="cover"
+                className="inline-flex items-center gap-1.5 text-foreground/70 transition-colors hover:text-foreground group-hover:text-foreground"
+              >
+                Insurance
+                <ChevronDown className="size-3.5 transition-transform group-hover:rotate-180" />
+              </Link>
+              <div className="invisible absolute left-1/2 top-full z-50 w-[30rem] -translate-x-1/2 pt-5 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                <div className="grid grid-cols-2 gap-px border border-border bg-border shadow-card">
+                  {products.map(({ icon: Icon, name, note, slug }) => (
+                    <Link
+                      key={slug}
+                      to="/"
+                      hash={slug}
+                      className="flex items-start gap-3 bg-card p-4 transition-colors hover:bg-secondary"
+                    >
+                      <Icon className="mt-0.5 size-4 shrink-0 text-brand" strokeWidth={1.5} />
+                      <span>
+                        <span className="block text-[13px] font-semibold leading-tight">{name}</span>
+                        <span className="mt-1 block text-[11px] leading-snug text-muted-foreground">
+                          {note}
+                        </span>
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             {nav.map((item) => (
               <Link
                 key={item.label}
@@ -77,8 +110,7 @@ export function SiteHeader() {
           </nav>
 
           <Link
-            to="/"
-            hash="quote"
+            to="/contact"
             className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:shadow-luxe"
           >
             Talk to an advisor
