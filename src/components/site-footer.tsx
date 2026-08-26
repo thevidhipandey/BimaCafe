@@ -3,6 +3,14 @@ import { ArrowUpRight } from "lucide-react";
 
 import paLogo from "@/assets/pa-logo.png.asset.json";
 
+const footerLinks = [
+  { label: "Home", to: "/" },
+  { label: "About", to: "/about" },
+  { label: "POSP", to: "/posp" },
+  { label: "Contact", to: "/contact" },
+  { label: "Claims", to: "/contact", hash: "claims" },
+];
+
 export function SiteFooter() {
   return (
     <footer className="ink-panel gold-top">
@@ -28,6 +36,18 @@ export function SiteFooter() {
               Sampoorna Suraksha
             </p>
           </div>
+          <nav className="flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-ink-foreground/75">
+            {footerLinks.map((item) => (
+              <Link
+                key={item.label}
+                to={item.to}
+                {...(item.hash ? { hash: item.hash } : {})}
+                className="transition-colors hover:text-ink-foreground"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
           <div className="flex items-center gap-4">
             <span className="rounded-sm bg-cream px-3 py-2">
               <img
