@@ -1,23 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  ArrowUpRight,
-  HeartPulse,
-  ShieldCheck,
-  TrendingUp,
-  Car,
-  HardHat,
-  Scale,
-  Ship,
-  Users,
-  Home,
-  Umbrella,
-  Phone,
-  Mail,
-  Quote,
-} from "lucide-react";
+import { ArrowUpRight, Phone, Mail, Quote } from "lucide-react";
 
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { products } from "@/lib/products";
 import heroFamily from "@/assets/hero-family.jpg";
 import businessTower from "@/assets/business-tower.jpg";
 import advisor from "@/assets/advisor.jpg";
@@ -42,19 +28,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Index,
 });
-
-const products = [
-  { icon: HeartPulse, name: "Health Insurance", note: "Cashless at 12,000+ hospitals" },
-  { icon: ShieldCheck, name: "Term Insurance", note: "Up to ₹5 Cr cover" },
-  { icon: TrendingUp, name: "Investment Plans", note: "Guaranteed & market-linked" },
-  { icon: Car, name: "Motor Insurance", note: "Instant policy, 60-second quote" },
-  { icon: HardHat, name: "Workmen Compensation", note: "Statutory cover for your crew" },
-  { icon: Scale, name: "Liability Insurance", note: "Directors, products, public" },
-  { icon: Ship, name: "Marine Insurance", note: "Cargo, transit & hull" },
-  { icon: Users, name: "Employee Benefits", note: "Group health & GPA" },
-  { icon: Home, name: "Property Insurance", note: "Home, plant & stock" },
-  { icon: Umbrella, name: "Other Insurance", note: "Travel, pet, event, cyber" },
-];
 
 const stats = [
   { value: "18,400+", label: "Policies advised" },
@@ -199,9 +172,10 @@ function Index() {
         </div>
 
         <div className="mt-20 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-          {products.map(({ icon: Icon, name, note }) => (
+          {products.map(({ icon: Icon, name, note, slug }) => (
             <a
-              key={name}
+              key={slug}
+              id={slug}
               href="#quote"
               className="group flex flex-col justify-between bg-card p-10 transition-colors duration-500 hover:bg-secondary"
             >
@@ -216,9 +190,6 @@ function Index() {
               </div>
             </a>
           ))}
-          <div aria-hidden className="hidden bg-card lg:block" />
-          <div aria-hidden className="hidden bg-card lg:block" />
-
         </div>
       </section>
 
