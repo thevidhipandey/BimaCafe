@@ -20,6 +20,7 @@ import {
 
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { insurers } from "@/lib/insurers";
 import aboutOffice from "@/assets/about-office.jpg";
 import aboutValues from "@/assets/about-values.jpg";
 import aboutTeam from "@/assets/about-team.jpg";
