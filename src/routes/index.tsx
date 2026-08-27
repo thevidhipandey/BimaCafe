@@ -190,6 +190,9 @@ function Index() {
               </div>
             </a>
           ))}
+          
+          <div aria-hidden className="hidden bg-card lg:block" />
+          <div aria-hidden className="hidden bg-card lg:block" />
         </div>
       </section>
 

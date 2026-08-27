@@ -20,6 +20,7 @@ import {
 
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { insurers } from "@/lib/insurers";
 import aboutOffice from "@/assets/about-office.jpg";
 import aboutValues from "@/assets/about-values.jpg";
 import aboutTeam from "@/assets/about-team.jpg";
@@ -125,20 +126,8 @@ const leaders = [
   },
 ];
 
-const partners = [
-  "HDFC ERGO",
-  "ICICI Lombard",
-  "Bajaj Allianz",
-  "Tata AIG",
-  "Star Health",
-  "Niva Bupa",
-  "SBI General",
-  "New India",
-  "Care Health",
-  "Reliance General",
-  "Kotak General",
-  "Digit",
-];
+
+
 
 function About() {
   const [active, setActive] = useState<(typeof pillars)[number]["key"]>("values");
@@ -390,13 +379,20 @@ function About() {
           <h2 className="display-xl mt-7 max-w-2xl text-[clamp(1.9rem,3.4vw,3rem)]">
             Thirty-five insurers compared, none of them our boss
           </h2>
-          <div className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-3 lg:grid-cols-6">
-            {partners.map((p) => (
+          <div className="mt-14 grid gap-px border border-border bg-border grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
+            {insurers.map((p) => (
               <div
-                key={p}
-                className="flex items-center justify-center bg-card px-6 py-8 text-center text-sm font-semibold tracking-wide text-foreground/75"
+                key={p.name}
+                className="flex items-center justify-center bg-card px-6 py-8"
               >
-                {p}
+                <img
+                  src={p.url}
+                  alt={`${p.name} logo`}
+                  width={340}
+                  height={130}
+                  loading="lazy"
+                  className="h-12 w-auto max-w-full object-contain"
+                />
               </div>
             ))}
           </div>
