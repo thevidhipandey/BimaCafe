@@ -125,20 +125,8 @@ const leaders = [
   },
 ];
 
-const partners = [
-  "HDFC ERGO",
-  "ICICI Lombard",
-  "Bajaj Allianz",
-  "Tata AIG",
-  "Star Health",
-  "Niva Bupa",
-  "SBI General",
-  "New India",
-  "Care Health",
-  "Reliance General",
-  "Kotak General",
-  "Digit",
-];
+
+
 
 function About() {
   const [active, setActive] = useState<(typeof pillars)[number]["key"]>("values");
