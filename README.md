@@ -1,24 +1,55 @@
-# Bimacafe 
+# Bimacafe
 
-https://bimacafe.com/ redesign this site making it look premium n more bigger like branded sites
+A modern, multi-page insurance website designed with a premium and professional visual style.
 
-This project was built with [Lovable](https://lovable.dev).
+## About
 
-## Build with Lovable
+Bimacafe is a frontend redesign concept for an insurance company, created to explore how a traditional insurance website can be presented with a more modern, polished, and user-friendly interface.
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/b134151d-a129-4a78-bef2-7aa7c872e521).
+The website includes multiple interconnected pages covering different insurance services and company information.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## Features
 
-## Development
+- Responsive multi-page website
+- Modern and premium UI
+- Multiple insurance categories
+- Interconnected page navigation
+- Service-focused layouts
+- Responsive design for different screen sizes
+- Interactive UI elements and sections
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Tech Stack
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+- React
+- Vite
+- JavaScript
+- CSS
+- HTML
+
+## Project Goal
+
+The goal of this project was to practice frontend development and UI design while creating a professional-looking website for a real-world use case.
+
+It also helped me explore:
+
+- Multi-page website structure
+- Responsive web design
+- UI/UX principles
+- Website navigation
+- Git and GitHub workflow
+
+
+## Future Improvements
+
+- Add backend functionality
+- Add working insurance enquiry/quote forms
+- Add user authentication
+- Connect forms to a database
+- Improve accessibility
+- Add more interactive features
+
+## Author
+
+**Vidhi Pandey**
+
+B.Tech CSE Student
