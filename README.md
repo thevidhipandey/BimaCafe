@@ -1,4 +1,4 @@
-# Bimacade Premium
+# Bimacafe 
 
 https://bimacafe.com/ redesign this site making it look premium n more bigger like branded sites
 
