@@ -1,0 +1,4 @@
+- [ ] Add the BimaCafe puzzle-led hero with the exact supplied headline, original logo, and interactive assembly.
+- [ ] Carry accessible motion, spacing, and responsive navigation improvements across the existing pages without removing content.
+- [ ] Verify page metadata, key navigation, puzzle interaction, and current preview build status.
+- [ ] Apply the required package security update after the requested redesign is complete.

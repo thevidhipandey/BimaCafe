@@ -3,8 +3,8 @@ import { ArrowUpRight, Phone, Mail, Quote } from "lucide-react";
 
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { PuzzleHero } from "@/components/puzzle-hero";
 import { products } from "@/lib/products";
-import heroFamily from "@/assets/hero-family.jpg";
 import businessTower from "@/assets/business-tower.jpg";
 import advisor from "@/assets/advisor.jpg";
 
@@ -19,11 +19,13 @@ export const Route = createFileRoute("/")({
           "Compare and buy health, term, motor, marine, liability and employee benefit cover with Bima Cafe's licensed advisors and end-to-end claim support.",
       },
       { property: "og:title", content: "Bima Cafe | Sampoorna Suraksha" },
+      { property: "og:type", content: "website" },
       {
         property: "og:description",
         content:
           "Licensed insurance advisory for Indian families and businesses — 11 lines of cover, one dedicated advisor, claims handled for you.",
       },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
@@ -86,63 +88,7 @@ function Index() {
       <SiteHeader />
 
 
-      {/* Hero */}
-      <section className="ink-panel relative overflow-hidden">
-        <div className="mx-auto grid max-w-[1400px] items-center gap-16 px-6 py-24 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:py-36">
-          <div className="animate-rise">
-            <div className="flex items-center gap-4">
-              <span className="gold-rule w-16 shrink-0" />
-              <span className="eyebrow text-gold-gradient">Since 2009 · 35 insurer partners</span>
-            </div>
-            <p className="wordmark mt-9 text-[clamp(2.75rem,7.2vw,5.5rem)] text-ink-foreground">
-              BIMA<span className="text-gold">CAFE</span>
-            </p>
-            <h1 className="display-xl mt-6 text-[clamp(2rem,4vw,3.4rem)] font-normal italic text-ink-foreground/90">
-              Protection worthy of a lifetime&apos;s work.
-            </h1>
-            <p className="mt-10 max-w-xl text-lg leading-relaxed text-ink-foreground/70">
-              Bima Cafe is an advisory-first insurance broker. Eleven lines of cover, thirty-five
-              insurers, one dedicated advisor who stays with you through every renewal and every
-              claim.
-            </p>
-            <div className="mt-12 flex flex-wrap items-center gap-4">
-              <a
-                href="#quote"
-                className="inline-flex items-center gap-2 rounded-full bg-brand px-9 py-4 text-sm font-semibold text-brand-foreground transition-all hover:shadow-luxe"
-              >
-                Get a tailored quote <ArrowUpRight className="size-4" />
-              </a>
-              <a
-                href="#cover"
-                className="inline-flex items-center gap-2 rounded-full border border-ink-foreground/25 px-9 py-4 text-sm font-semibold text-ink-foreground/90 transition-colors hover:border-ink-foreground/60"
-              >
-                Explore our cover
-              </a>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="overflow-hidden rounded-sm shadow-luxe">
-              <img
-                src={heroFamily}
-                alt="An Indian family looking towards the city skyline at sunset"
-                width={1408}
-                height={1600}
-                className="h-[34rem] w-full object-cover lg:h-[42rem]"
-              />
-            </div>
-            <div className="absolute -bottom-10 -left-6 hidden w-72 border-t-2 border-gold bg-card p-8 text-card-foreground shadow-card sm:block">
-              <p className="eyebrow text-brand">Claim promise</p>
-              <p className="mt-4 font-[family-name:var(--font-display)] text-4xl font-bold">
-                98.2%
-              </p>
-              <p className="mt-2 text-sm text-muted-foreground">
-                of assisted claims settled — we file, follow up and negotiate on your behalf.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PuzzleHero />
 
       {/* Stats */}
       <section className="pearl-panel gold-top border-b border-border">
