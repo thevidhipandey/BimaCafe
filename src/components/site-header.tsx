@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight, ChevronDown, Mail, Phone } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
 
 import paLogo from "@/assets/pa-logo.png.asset.json";
 import bimacafeLogo from "@/assets/bimacafe-logo.png.asset.json";
 import { products } from "@/lib/products";
+import { Button } from "@/components/ui/button";
 
 const nav = [
   { label: "For Business", to: "/", hash: "cover" },
@@ -14,6 +16,8 @@ const nav = [
 ] as const;
 
 export function SiteHeader() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <>
       {/* Utility bar */}
@@ -111,12 +115,67 @@ export function SiteHeader() {
 
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:shadow-luxe"
+            className="group hidden items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:shadow-luxe lg:inline-flex"
           >
             Talk to an advisor
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
+
+          <Button
+            type="button"
+            variant="outline"
+            size="icon"
+            className="border-border bg-card lg:hidden"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-site-navigation"
+            onClick={() => setMobileMenuOpen((open) => !open)}
+          >
+            {mobileMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+          </Button>
         </div>
+        {mobileMenuOpen && (
+          <nav id="mobile-site-navigation" className="border-t border-border bg-background px-6 py-5 lg:hidden" aria-label="Mobile navigation">
+            <div className="mx-auto grid max-w-[1400px] gap-7 md:px-4">
+              <div>
+                <p className="eyebrow mb-4 text-brand">Insurance</p>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-3">
+                  {products.map(({ name, slug }) => (
+                    <Link
+                      key={slug}
+                      to="/"
+                      hash={slug}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="border-b border-border/70 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-brand"
+                    >
+                      {name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-3 border-t border-border pt-5 text-sm font-semibold">
+                {nav.map((item) => (
+                  <Link
+                    key={item.label}
+                    to={item.to}
+                    {...(item.hash ? { hash: item.hash } : {})}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="py-1 text-foreground/80 transition-colors hover:text-brand"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <Link
+                  to="/contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="col-span-2 mt-1 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground"
+                >
+                  Talk to an advisor <ArrowUpRight aria-hidden="true" className="size-4" />
+                </Link>
+              </div>
+            </div>
+          </nav>
+        )}
       </header>
     </>
   );
